@@ -22,6 +22,8 @@ void main() {
       List<String> pathElemanlari = settings.name.split("/");
       if(pathElemanlari[1]=="detay")
         return MaterialPageRoute(builder: (context)=>ListeDetay(int.parse(pathElemanlari[2])));
+      else
+        return null;
     },
 
     onUnknownRoute: (RouteSettings settings) => MaterialPageRoute(builder: (context)=> DSayfasi()),
