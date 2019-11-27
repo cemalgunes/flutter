@@ -11,9 +11,8 @@ class _TabSampleState extends State<TabSample>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    tabController = TabController(length: 4, vsync: this);
+    tabController = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -21,7 +20,7 @@ class _TabSampleState extends State<TabSample>
     return Scaffold(
       appBar: AppBar(
         title: Text("Tab Kullanımı"),
-        bottom: tabBarimBottom(),
+        //bottom: tabBarimBottom(),
       ),
       bottomNavigationBar: tabBarimBottom(),
       body: TabBarView(controller: tabController,children: <Widget>[
