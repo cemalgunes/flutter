@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "658894788402",
+    "firebase_url": "https://fir-dersleri-7543c.firebaseio.com",
+    "project_id": "fir-dersleri-7543c",
+    "storage_bucket": "fir-dersleri-7543c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658894788402:android:cf29ff0b058e54975ce92b",
+        "android_client_info": {
+          "package_name": "com.balkansoftware.firebase_dersleri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658894788402-cb859sndlnb4ce3ibuhii96o7jgdlhai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCC1iO5YD2zFKE9bw6agsXR0HGf8vwnxms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658894788402-cb859sndlnb4ce3ibuhii96o7jgdlhai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
