@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "624463526818",
+    "firebase_url": "https://statemanagement-f62e3.firebaseio.com",
+    "project_id": "statemanagement-f62e3",
+    "storage_bucket": "statemanagement-f62e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624463526818:android:4ea177f08b6dd50e4750fb",
+        "android_client_info": {
+          "package_name": "com.balkansoftware.state_management"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624463526818-md3m4mpnfp9hrt1gjvdk411gus2kpaqv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.balkansoftware.state_management",
+            "certificate_hash": "0d3e0e5fcd179a18e6e89e4fb004a611e344cd4a"
+          }
+        },
+        {
+          "client_id": "624463526818-oqf632fg1plm637e490jp776td2htjd8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbLveivZrvbrKBaOq27cDBovW5JMDPNPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624463526818-oqf632fg1plm637e490jp776td2htjd8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
