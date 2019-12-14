@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:state_management/bloc/sayac/sayac_event.dart';
 
 class SayacBloc {

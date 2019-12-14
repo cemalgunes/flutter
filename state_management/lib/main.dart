@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:state_management/provider_package_kullanimi.dart';
 import 'package:state_management/sayac.dart';
+import 'package:state_management/stream_kullanimi.dart';
 import 'package:state_management/user_repository.dart';
+import 'bloc_kullanimi.dart';
 import 'firebaseauth_provider.dart';
+import 'flutter_bloc_paket_kullanimi.dart';
 
 void main() => runApp(MyApp());
 
@@ -98,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("Provider Package FirebaseAuth"),
               color: Colors.pink,
             ),
-            /*
+
             RaisedButton(
               onPressed: () {
                 Navigator.of(context).push(
@@ -122,7 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text("Flutter_Bloc Paket Kullanımı"),
               color: Colors.teal,
-            ),*/
+            ),
           ],
         ),
       ),
