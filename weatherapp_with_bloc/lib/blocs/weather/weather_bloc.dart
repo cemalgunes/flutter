@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:weatherapp_with_bloc/data/weather_repository.dart';
 import 'package:weatherapp_with_bloc/models/weather.dart';
 import '../../locator.dart';
@@ -25,11 +26,11 @@ class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
       }
     } else if (event is RefreshWeatherEvent) {
       try {
-        final Weather getirilenWeather =
-        await weatherRepository.getWeather(event.sehirAdi);
+        final Weather getirilenWeather = await weatherRepository.getWeather(event.sehirAdi);
         yield WeatherLoadedState(weather: getirilenWeather);
       } catch (_) {
-        yield WeatherErrorState();
+        debugPrint("hata");
+        yield state;
       }
     }
   }

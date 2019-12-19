@@ -3,10 +3,7 @@ import 'package:meta/meta.dart';
 
 @immutable
 abstract class WeatherEvent extends Equatable {
-  WeatherEvent([List props = const []]);
-
-  @override
-  List<Object> get props => [props];
+  WeatherEvent([List props = const []]) : super(props);
 }
 
 class FetchWeatherEvent extends WeatherEvent {

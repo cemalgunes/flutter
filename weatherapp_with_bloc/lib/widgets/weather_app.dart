@@ -14,9 +14,15 @@ class WeatherApp extends StatelessWidget {
   String kullanicininSectigiSehir = "Ankara";
   Completer<void> _refreshCompleter = Completer<void>();
 
+  //final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
+    //  new GlobalKey<RefreshIndicatorState>();
+
   @override
   Widget build(BuildContext context) {
+    //ignore: close_sinks
     final _weatherBloc = BlocProvider.of<WeatherBloc>(context);
+    //ignore: close_sinks
+    final _temaBloc = BlocProvider.of<TemaBloc>(context);
 
     return Scaffold(
       appBar: AppBar(
@@ -43,32 +49,29 @@ class WeatherApp extends StatelessWidget {
                 child: Text("Şehir Seçiniz"),
               );
             }
-            if (state is WeatherLoadingState) {
+            else if (state is WeatherLoadingState) {
               return Center(
                 child: CircularProgressIndicator(),
               );
             }
-            if (state is WeatherLoadedState) {
+            else if (state is WeatherLoadedState) {
               final getirilenWeather = state.weather;
-              final _havaDurumKisaltma =
-                  getirilenWeather.consolidatedWeather[0].weatherStateAbbr;
-              /* final _temaBloc = BlocProvider.of<TemaBloc>(context);
-              _temaBloc.dispatch(event)*/
               kullanicininSectigiSehir = getirilenWeather.title;
-              BlocProvider.of<TemaBloc>(context).add(
-                  TemaDegistirEvent(havaDurumuKisaltmasi: _havaDurumKisaltma));
+              final _havaDurumKisaltma = getirilenWeather.consolidatedWeather[0].weatherStateAbbr;
+
+              //_temaBloc.add(TemaDegistirEvent(havaDurumuKisaltmasi: _havaDurumKisaltma));
 
               _refreshCompleter.complete();
               _refreshCompleter = Completer();
 
               return BlocBuilder(
-                bloc: BlocProvider.of<TemaBloc>(context),
+                bloc: _temaBloc,
                 builder: (context, TemaState temaState) => GecisliRenkContainer(
                   renk: (temaState as UygulamaTemasi).renk,
                   child: RefreshIndicator(
+                    //key: _refreshIndicatorKey,
                     onRefresh: () {
-                      _weatherBloc.add(RefreshWeatherEvent(
-                          sehirAdi: kullanicininSectigiSehir));
+                      _weatherBloc.add(RefreshWeatherEvent(sehirAdi: kullanicininSectigiSehir));
                       return _refreshCompleter.future;
                     },
                     child: ListView(
@@ -98,7 +101,7 @@ class WeatherApp extends StatelessWidget {
                 ),
               );
             }
-            if (state is WeatherErrorState) {
+            else {
               return Center(
                 child: Text("Hata Oluştu"),
               );

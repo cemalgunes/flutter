@@ -4,11 +4,7 @@ import 'package:weatherapp_with_bloc/models/weather.dart';
 
 @immutable
 abstract class WeatherState extends Equatable {
-  WeatherState([List props = const []]);
-
-  @override
-  List<Object> get props => [props];
-
+  WeatherState([List props = const []]): super(props);
 }
 
 class InitialWeatherState extends WeatherState {}
