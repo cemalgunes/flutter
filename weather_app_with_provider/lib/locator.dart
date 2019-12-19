@@ -1,6 +1,5 @@
 import 'package:get_it/get_it.dart';
-import 'package:weather_app_with_provider/viewmodels/weather_view_model.dart';
-
+import 'viewmodels/weather_view_model.dart';
 import 'data/weather_api_client.dart';
 import 'data/weather_repository.dart';
 
