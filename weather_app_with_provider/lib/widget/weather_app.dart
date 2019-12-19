@@ -65,7 +65,6 @@ class _HavaDurumuGeldiState extends State<HavaDurumuGeldi> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _refreshIndicator = Completer<void>();
     debugPrint("init state tetiklendi");

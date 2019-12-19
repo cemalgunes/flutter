@@ -8,7 +8,7 @@ import 'widget/weather_app.dart';
 void main() {
   setupLocator();
   runApp(ChangeNotifierProvider(
-      builder: (context) => MyThemeViewModel(), child: MyApp()));
+      create : (context) => MyThemeViewModel(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
